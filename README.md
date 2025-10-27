@@ -8,7 +8,7 @@
 
 ---
 
-## ⚙️ Funcionalidades principales
+⚙️ Funcionalidades principales
 1. Backup comprimido y limpieza de copias antiguas.  
 2. Informe de CPU, memoria y disco.  
 3. Limpieza de archivos temporales y caché.  
@@ -18,7 +18,7 @@ Extras:
 
 ---
 
-## 👥 Autor
+👥 Autor
 - **Teo Alex Cagnolo**  
 Materia: *Sistemas Operativos*  
  
