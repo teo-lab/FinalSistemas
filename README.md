@@ -19,7 +19,8 @@ Extras:
 ---
 
 👥 Autor
-- **Teo Alex Cagnolo**  
+- **Teo Alex Cagnolo**
+- **German Rodriguez**
 Materia: *Sistemas Operativos*  
  
 ---
