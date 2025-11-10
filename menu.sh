@@ -27,7 +27,7 @@ while true; do
     1) ./info.sh ;;         # Ejecuta el script que genera el informe del sistema.
     2) ./backup.sh ;;       # Ejecuta el script que realiza el backup automático.
     3) ./clean.sh ;;        # Ejecuta el script que limpia archivos temporales y cachés.
-    0) echo -e "${VERDE}Chau!${RESET}"; exit 0 ;;
+    0) echo -e "${VERDE}¡Hasta luego!${RESET}"; exit 0 ;;
   esac
 
   echo
