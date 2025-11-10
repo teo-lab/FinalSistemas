@@ -8,12 +8,12 @@ RESET="\e[0m"
 while true; do
   clear
   # Muestra el título del menú y las opciones con colores.
-  echo -e "${VERDE}===== MENU TIF =====${RESET}"
-  echo -e "${CIAN}1) INFO   (informe del sistema)${RESET}"
-  echo -e "${CIAN}2) BACKUP (comprimir carpeta + rotación)${RESET}"
-  echo -e "${CIAN}3) CLEAN  (limpieza básica + cachés)${RESET}"
+  echo -e "${VERDE}===== MENU =====${RESET}"
+  echo -e "${CIAN}1) INFO   (Informe del sistema)${RESET}"
+  echo -e "${CIAN}2) BACKUP (Respaldo de directorio y gestion backups)${RESET}"
+  echo -e "${CIAN}3) CLEAN  (Limpieza cache, archivos temporales)${RESET}"
   echo -e "${CIAN}0) SALIR${RESET}"
-  echo "===================="
+  echo -e "${VERDE}====================${RESET}"
   read -p "Elegí una opción (0-3): " op
 
   # (EXTRA) Validación de entrada (solo acepta 0,1,2,3)
