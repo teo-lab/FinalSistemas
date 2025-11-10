@@ -1,22 +1,35 @@
-# Menú para ejecutar INFO / BACKUP / CLEAN
+#Script del Menu Interactivo
+#Codigos ANSI
+VERDE="\e[32m"
+CIAN="\e[36m"
+ROJO="\e[31m"
+RESET="\e[0m"
 
 while true; do
   clear
-  echo "===== MENU TIF ====="
-  echo "1) INFO   (informe del sistema)"
-  echo "2) BACKUP (comprimir carpeta)"
-  echo "3) CLEAN  (limpieza básica)"
-  echo "0) Volver/Salir"
+  # Muestra el título del menú y las opciones con colores.
+  echo -e "${VERDE}===== MENU TIF =====${RESET}"
+  echo -e "${CIAN}1) INFO   (informe del sistema)${RESET}"
+  echo -e "${CIAN}2) BACKUP (comprimir carpeta + rotación)${RESET}"
+  echo -e "${CIAN}3) CLEAN  (limpieza básica + cachés)${RESET}"
+  echo -e "${CIAN}0) SALIR${RESET}"
   echo "===================="
-  read -p "Opción: " op
+  read -p "Elegí una opción (0-3): " op
+
+  # (EXTRA) Validación de entrada (solo acepta 0,1,2,3)
+  if [ "$op" != "0" ] && [ "$op" != "1" ] && [ "$op" != "2" ] && [ "$op" != "3" ]; then
+    echo -e "${ROJO}⚠️  Opción inválida. Ingresá un número entre 0 y 3.${RESET}"
+    sleep 1        # Espera un segundo antes de volver al menú.
+    continue
+  fi
 
   case "$op" in
-    1) ./info.sh ;;
-    2) ./backup.sh ;;
-    3) ./clean.sh ;;
-    0) echo "Chau!"; exit 0 ;;
-    *) echo "Opción inválida" ;;
+    1) ./info.sh ;;         # Ejecuta el script que genera el informe del sistema.
+    2) ./backup.sh ;;       # Ejecuta el script que realiza el backup automático.
+    3) ./clean.sh ;;        # Ejecuta el script que limpia archivos temporales y cachés.
+    0) echo -e "${VERDE}Chau!${RESET}"; exit 0 ;;
   esac
 
-  read -p $'\nPresioná ENTER para volver al menú...'
+  echo
+  read -p "Presioná ENTER para volver al menú..." _
 done
