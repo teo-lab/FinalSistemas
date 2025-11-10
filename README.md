@@ -47,14 +47,17 @@ chmod +x *.sh
 Opción 1 – INFO
 Genera un log con información del sistema operativo, kernel, CPU, memoria y discos.
 El resultado se guarda en la carpeta logs/ con la fecha y hora de ejecución:
+
 logs/info-20251110-123045.log
 
 Opción 2 – BACKUP
 Crea un archivo comprimido (.tar.gz) en el directorio backups/ y elimina automáticamente los respaldos más antiguos:
+
 backups/backup-20251110-123050.tar.gz
 
 Opción 3 – CLEAN
 Limpia los archivos temporales del sistema y cachés de usuario o navegadores, generando un archivo log con las acciones ejecutadas:
+
 logs/clean-20251110-123200.log
 
 Opción 0 – SALIR
